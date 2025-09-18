@@ -1,7 +1,17 @@
 import Hero from "@/components/sitr/Hero";
 import { Button } from "@/components/ui/button";
 
-function SectionTitle({ id, eyebrow, title, desc }: { id: string; eyebrow?: string; title: string; desc?: string }) {
+function SectionTitle({
+  id,
+  eyebrow,
+  title,
+  desc,
+}: {
+  id: string;
+  eyebrow?: string;
+  title: string;
+  desc?: string;
+}) {
   return (
     <div id={id} className="mx-auto max-w-3xl text-center">
       {eyebrow && (
@@ -10,7 +20,9 @@ function SectionTitle({ id, eyebrow, title, desc }: { id: string; eyebrow?: stri
           {eyebrow}
         </div>
       )}
-      <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
+      <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
+        {title}
+      </h2>
       {desc && <p className="mt-3 text-muted-foreground">{desc}</p>}
     </div>
   );
@@ -57,7 +69,10 @@ export default function Index() {
               desc: "Start free. Upgrade as your team grows.",
             },
           ].map((f) => (
-            <div key={f.title} className="group rounded-xl border bg-background/60 p-6 backdrop-blur transition-colors hover:border-emerald-400/40">
+            <div
+              key={f.title}
+              className="group rounded-xl border bg-background/60 p-6 backdrop-blur transition-colors hover:border-emerald-400/40"
+            >
               <div className="mb-3 h-10 w-10 rounded-md bg-gradient-to-br from-emerald-400/70 to-sky-400/70" />
               <h3 className="text-lg font-semibold">{f.title}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{f.desc}</p>
@@ -91,8 +106,13 @@ export default function Index() {
                 desc: "Runtime attestation + licensing to keep control.",
               },
             ].map((s, i) => (
-              <li key={s.title} className="relative rounded-xl border bg-background/60 p-6">
-                <div className="absolute -top-3 left-6 rounded-full border bg-background px-2 py-0.5 text-xs text-muted-foreground">{i + 1}</div>
+              <li
+                key={s.title}
+                className="relative rounded-xl border bg-background/60 p-6"
+              >
+                <div className="absolute -top-3 left-6 rounded-full border bg-background px-2 py-0.5 text-xs text-muted-foreground">
+                  {i + 1}
+                </div>
                 <h3 className="font-semibold">{s.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
               </li>
@@ -105,7 +125,10 @@ export default function Index() {
       <section id="pricing" className="container py-20">
         <div className="mx-auto max-w-4xl rounded-2xl border bg-gradient-to-r from-emerald-500/10 to-sky-500/10 p-8 text-center">
           <h3 className="text-2xl font-bold">Simple, transparent pricing</h3>
-          <p className="mt-2 text-muted-foreground">Start free. Upgrade when you need advanced policies and team features.</p>
+          <p className="mt-2 text-muted-foreground">
+            Start free. Upgrade when you need advanced policies and team
+            features.
+          </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <div className="rounded-xl border bg-background/60 p-6">
               <div className="text-3xl font-extrabold">Free</div>
@@ -117,14 +140,21 @@ export default function Index() {
             </div>
           </div>
           <div id="get-started" className="mt-8">
-            <Button size="lg" className="px-8">Get started — it’s free</Button>
+            <Button size="lg" className="px-8">
+              Get started — it’s free
+            </Button>
           </div>
         </div>
       </section>
 
       {/* FAQ Placeholder */}
       <section id="faq" className="container pb-24">
-        <SectionTitle id="faq" eyebrow="FAQ" title="Questions?" desc="Tell me what pages you want and I’ll generate them next." />
+        <SectionTitle
+          id="faq"
+          eyebrow="FAQ"
+          title="Questions?"
+          desc="Tell me what pages you want and I’ll generate them next."
+        />
       </section>
     </div>
   );

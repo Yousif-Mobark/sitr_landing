@@ -47,7 +47,9 @@ function ScrambleReveal({
     setDisplay("");
   }, [target]);
   return (
-    <code className={cn("font-mono text-sm leading-relaxed break-all", className)}>
+    <code
+      className={cn("font-mono text-sm leading-relaxed break-all", className)}
+    >
       {display}
     </code>
   );
@@ -95,21 +97,24 @@ export default function CodeToHash() {
           <span>python ▶ sitr_encrypt()</span>
         </div>
         <pre className="font-mono text-[13px] leading-relaxed text-muted-foreground/90 overflow-hidden">
-{chunk}
-<span className="animate-pulse">▌</span>
+          {chunk}
+          <span className="animate-pulse">▌</span>
         </pre>
       </div>
 
       <div className="rounded-lg border bg-gradient-to-b from-emerald-500/10 to-sky-500/10 p-4 lg:p-5">
         <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
           <span>SHA-256</span>
-          <span className="uppercase tracking-widest text-emerald-400">hash</span>
+          <span className="uppercase tracking-widest text-emerald-400">
+            hash
+          </span>
         </div>
         <div className="rounded-md border border-emerald-500/30 bg-background/60 p-3">
           <ScrambleReveal target={hash} className="text-emerald-300/95" />
         </div>
         <p className="mt-3 text-xs text-muted-foreground">
-          Deterministic HMAC digest of your source. No plaintext leaves your browser.
+          Deterministic HMAC digest of your source. No plaintext leaves your
+          browser.
         </p>
       </div>
     </div>

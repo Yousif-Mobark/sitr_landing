@@ -16,10 +16,14 @@ export default function Hero() {
             End-to-end source protection
           </div>
           <h1 className="mt-6 text-balance text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-            Encrypt Python source with confidence — meet <span className="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">SITR</span>
+            Encrypt Python source with confidence — meet{" "}
+            <span className="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+              SITR
+            </span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-base/7 text-muted-foreground sm:text-lg/8">
-            A modern platform for encrypting, licensing, and verifying Python code. Built for teams shipping sensitive IP.
+            A modern platform for encrypting, licensing, and verifying Python
+            code. Built for teams shipping sensitive IP.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button size="lg" className="px-8">
